@@ -1,0 +1,93 @@
+<div class="container">
+  <div class="headercontent">
+    <button
+      type="button"
+      name="details"
+      class="btn-change"
+      placeholder="details"
+    >
+    <i class="fa fa-bars"></i>
+      SAVE LISTS
+    </button>
+    <button
+      type="button"
+      name="details"
+      class="btn-change"
+      placeholder="details"
+    >
+    <i class="fa fa-filter" aria-hidden="true"></i>
+      SAVED FILTERS
+    </button>
+    <button
+      type="button"
+      name="details"
+      class="btn-change"
+      placeholder="details"
+    >
+    <i class="fa fa-history" aria-hidden="true"></i>
+      SEARCH HISTORY
+    </button>
+
+    <form>
+      <div class="form-group form-inline serach">
+        <input
+          class="form-control ml-2 serach"
+          type="text"
+          #myInput
+          placeholder="Search"
+          [(ngModel)]="searchTerm"
+          (input)="search(myInput.value)"
+        />
+      </div>
+    </form>
+  </div>
+
+  <div class="main">
+    <div class="table-data">
+      <table class="table table-hover table-fixed">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>List Name</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of filteredItems">
+            <td>{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>
+              <span
+                type="button"
+                name="details"
+                class="detailbtn"
+                (click)="getDetails(user)"
+                placeholder="details"
+              >
+                Details
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-discription">
+      <div class="discription">
+        <h5>No Discriptions yet</h5>
+        <h4>+ADD DESCRIPTION</h4>
+      </div>
+      <div *ngIf="userDetails" class="discriptiondetails">
+        <ul>
+          <li>
+            Address: {{ userDetails?.address?.city }}
+            {{ userDetails?.address?.street }}
+          </li>
+          <li>
+            Company:{{ userDetails?.company?.name }}
+            {{ userDetails?.company?.catchPhrase }}
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

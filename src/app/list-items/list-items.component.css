@@ -1,0 +1,81 @@
+.container {
+  width: 100%;
+  margin-top: 36px;
+}
+
+.main {
+  display: flex;
+}
+.headercontent{
+  display: flex;
+  background: #f6f5f5;
+}
+.table-data {
+  width: 85%;
+  border: .5px solid #ddd8d8;
+}
+
+.table-discription {
+  width: 20%;
+  /* border: 1px solid black; */
+}
+.serach{
+  float: right;
+  width: 500px;
+  margin-left: 208px;
+  margin-top: 10px;
+}
+h5{
+
+  font-size: 12px;
+  margin-left: 17px;
+}
+h4{
+  font-size: 12px;
+  margin-left: 3px;
+  color: #3535a8;
+  font-weight: 800;
+}
+.discription{
+  display: flex;
+  background-color: lightgray;
+  margin-top: 10px;
+  margin-left: 8px;
+  margin-right: 8px;
+
+}
+.detailbtn{
+  cursor: pointer;
+  color: #31708f;
+  font-weight: 800;
+  text-decoration:none;
+
+}
+.detailbtn :hover{
+  display:inline-block;
+  text-decoration: underline;
+}
+.discriptiondetails{
+  color: cadetblue;
+  font-weight: 700;
+}
+.btn-change{
+  height: 42px;
+  width: 232px;
+  background: transparent;
+  margin: 20px;
+  float: left;
+  font-weight: bold;
+  box-shadow: 0 0 1px #ccc;
+  -webkit-transition: all 0.5s ease-in-out;
+  border: 0px;
+  color: gray;
+}
+.btn-change:hover{
+  -webkit-transform: scale(1.1);
+  background: #001c6e;
+  color: white;
+}
+i{
+  margin-right: 7px;
+}
